@@ -1,0 +1,22 @@
+{
+    "name": "smwhr/citybuilder",
+    "description": "A CityBuilder in AJax",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ju",
+            "email": "julien@troisyaourts.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Iso9005\\Geography\\Norms\\": "./Library/ISO-9005/"
+        },
+        "psr-0":{
+            "" : "."
+        }
+    }
+}
