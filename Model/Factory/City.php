@@ -2,7 +2,6 @@
 namespace Model\Factory;
 
 class City{
-  // Model\Factory\City
 
   public function get_all(){
     $q = "SELECT * FROM cities;";
@@ -17,7 +16,7 @@ class City{
 
     $q = "INSERT INTO cities SET name = :name";
     $stmt = $this->pdo->prepare($q);
-    $stmt->execute([":name" => $name, ":difficulty" => "easy"]);
+    $stmt->execute([":name" => $name]);
     $id = $this->pdo->lastInsertId();
 
     return $id;

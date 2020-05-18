@@ -3,19 +3,23 @@
 namespace Controller;
 
 use \Library\Request;
+use \Model\Factory\City as CityFactory;
+use \Model\Factory\District as DistrictFactory;
 
-class City extends Controller\Api{
+class City extends Api{
 
   public function createAction(Request $request){
 
     $city_name = $request->get("city_name");
 
-    //simulation d'enregistrement en BDD
-    $id = 34;
+    $cityFactory = new CityFactory($this->pdo);
+    $new_id = $cityFactory->add_one( 
+                                  $city_name
+                                  );
 
     return $this->response(["result" => "created",
                             "city" => $city_name,
-                            "id"   => $id
+                            "id"   => $new_id
                             ], 201);
     
   }
@@ -26,9 +30,8 @@ class City extends Controller\Api{
     $city_id = $request->get("city_id");
 
     //simulation
-    // $city = $cityFactory->get($city_id)
-    // $district = $districtFactory->add_one($district_name);
-    $district_id = 785;
+    $districtFactory = new DistrictFactory($this->pdo);
+    $district_id = $districtFactory->add_one_to_city($district_name, $city_id);
 
     return $this->response(
       ["result" => "added",

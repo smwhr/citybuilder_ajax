@@ -1,7 +1,7 @@
 <?php
 namespace Controller;
 
-class Api{
+class Api extends General{
   
   public function response($data, $code=200){
     header("Content-type: application/json");
