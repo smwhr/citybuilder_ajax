@@ -75,6 +75,7 @@ districtForm.addEventListener("submit", function(evt){
     }
     City.districts.push(d);
 
+    form.reset();
     $('#district-list').appendChild(li);
     $('#district-section .loader').classList.add("d-none");
     $('#district-section #create-district').classList.remove("d-none");
