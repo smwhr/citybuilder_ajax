@@ -1,8 +1,10 @@
 <?php
 
-//require_once("controllers/ApiController.php");
+namespace Controller;
 
-class CityController extends ApiController{
+use \Library\Request;
+
+class City extends Controller\Api{
 
   public function createAction(Request $request){
 

@@ -1,6 +1,8 @@
 <?php 
+namespace Model\Factory;
 
-class CityFactory{
+class City{
+  // Model\Factory\City
 
   public function get_all(){
     $q = "SELECT * FROM cities;";
@@ -19,7 +21,7 @@ class CityFactory{
     $id = $this->pdo->lastInsertId();
 
     return $id;
-    
+
   }
 
   public function get_one($id){

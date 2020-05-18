@@ -1,7 +1,8 @@
 <?php
-
+namespace Library;
 
 class Request{
+  //Library\Request
   private $post_params;
   private $get_params;
   private $uri;
