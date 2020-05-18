@@ -4,6 +4,7 @@
   //on initialise la session
   session_start();
 
+  //
   require_once("vendor/autoload.php");
 
   //on initialise la connexion à la bdd

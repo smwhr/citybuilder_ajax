@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "guzzlehttp/guzzle": "^7.0@dev"
+    },
     "autoload":{
         "psr-4":{
             "Iso9005\\Geography\\Norms\\": "./Library/ISO-9005/"
