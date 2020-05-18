@@ -3,7 +3,7 @@
 
 class MainController{
 
-  function indexAction($request){
+  function indexAction(Request $request){
 
     include("views/front/index.html.php");
 

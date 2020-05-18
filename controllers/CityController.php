@@ -1,10 +1,10 @@
 <?php
 
-require_once("controllers/ApiController.php");
+//require_once("controllers/ApiController.php");
 
 class CityController extends ApiController{
 
-  public function createAction($request){
+  public function createAction(Request $request){
 
     $city_name = $request->get("city_name");
 
@@ -18,7 +18,7 @@ class CityController extends ApiController{
     
   }
 
-  public function adddistrictAction($request){
+  public function adddistrictAction(Request $request){
 
     $district_name = $request->get("district_name");
     $city_id = $request->get("city_id");

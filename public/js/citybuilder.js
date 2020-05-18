@@ -68,8 +68,7 @@ districtForm.addEventListener("submit", function(evt){
     var li = document.createElement("li");
         li.innerHTML = data.district;
         li.setAttribute("district_id", data.id);
-
-
+        
     var d = {
       name: data.district,
       id: data.id,
