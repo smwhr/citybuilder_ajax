@@ -1,13 +1,14 @@
 <?php 
+namespace Model\Factory;
 
-class DistrictFactory{
+class District extends AbstractFactory{
 
   public function add_one_to_city(  $name,
                                     $city_id 
                                   ){
     $q = "INSERT INTO districts SET 
                             name = :name,
-                            city = :city_id
+                            city_id = :city_id
                     ";
     $stmt = $this->pdo->prepare($q);
     $stmt->execute([":name" => $name,

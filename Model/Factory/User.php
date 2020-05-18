@@ -1,5 +1,5 @@
 <?php 
 
-class UserFactory{
+class User extends AbstractFactory{
   
 }

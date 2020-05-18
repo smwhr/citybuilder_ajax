@@ -26,8 +26,13 @@ class City extends Api{
 
   public function adddistrictAction(Request $request){
 
+
     $district_name = $request->get("district_name");
     $city_id = $request->get("city_id");
+
+    //todo secu
+    // - verifier que la ville existe
+    // - vérifier éventuellement que l'utilisateur a le droit de modifier cette ville
 
     //simulation
     $districtFactory = new DistrictFactory($this->pdo);

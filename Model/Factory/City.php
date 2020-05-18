@@ -1,7 +1,7 @@
 <?php 
 namespace Model\Factory;
 
-class City{
+class City extends AbstractFactory{
 
   public function get_all(){
     $q = "SELECT * FROM cities;";

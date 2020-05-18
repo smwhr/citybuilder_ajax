@@ -1,5 +1,5 @@
 <?php 
 
-class StreetFactory{
+class Street extends AbstractFactory{{
 
 }
